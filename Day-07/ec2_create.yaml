@@ -6,10 +6,10 @@
   - name: Create EC2 instances
     amazon.aws.ec2_instance:
       name: "{{ item.name }}"
-      key_name: "abhi-aws-keypair"
+      key_name: "ansible"  # Update with your keypair name
       instance_type: t2.micro
       security_group: default
-      region: ap-south-1
+      region: us-east-1  # Write the region where you want to lunch
       aws_access_key: "{{ec2_access_key}}"  # From vault as defined
       aws_secret_key: "{{ec2_secret_key}}"  # From vault as defined      
       network:
@@ -18,6 +18,6 @@
       tags:
         environment: "{{ item.name }}"
     loop:
-      - { image: "ami-0e1d06225679bc1c5", name: "manage-node-1" } # Update AMI ID according 
-      - { image: "ami-0f58b397bc5c1f2e8", name: "manage-node-2" } # to your account
+      - { image: "ami-0e1d06225679bc1c5", name: "manage-node-1" } # Update AMI ID according to your account 
+      - { image: "ami-0f58b397bc5c1f2e8", name: "manage-node-2" } # Update the AMI ID according to the region
       - { image: "ami-0f58b397bc5c1f2e8", name: "manage-node-3" }
