@@ -62,7 +62,7 @@ ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
 
 # Command to execute the playbook
 ```
-ansible-playbook -ec2_create.yaml --vault-password-file vault.pass
+ansible-playbook ec2_create.yaml --vault-password-file vault.pass
 ```
 
 
