@@ -19,6 +19,10 @@ Automate the shutdown of Ubuntu Instances only using Ansible Conditionals
 
 Hint: Use `when` condition on ansible `gather_facts`
 
+################################################################################################################################
+
+Solution
+--------
 
 # Creating  Control Node
 
